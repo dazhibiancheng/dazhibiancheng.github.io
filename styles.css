@@ -1,0 +1,842 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --light-gray: #f8f9fa;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gradient-start: #2c3e50;
+    --gradient-end: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏样式 */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 主要内容样式 */
+main {
+    margin-top: 80px;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+}
+
+/* 专业领域样式 */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.expertise-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+}
+
+/* 联系方式样式 */
+.contact-info {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+}
+
+.contact-details a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 添加 hero 部分样式 */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 8rem 0 4rem;
+    margin-top: 60px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-image {
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 资质和成就样式 */
+.qualification, .achievements {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.qualification h3, .achievements h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.qualification ul, .achievements ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+/* 课程卡片样式 */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.course-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.course-age {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.course-features {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.course-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.course-features li:last-child {
+    border-bottom: none;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 添加新的课程详情样式 */
+.featured-course {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    margin-top: 2rem;
+}
+
+.course-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.course-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.course-highlights {
+    margin-bottom: 3rem;
+}
+
+.course-highlights ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.course-highlights li {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.module {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.module h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.module ul {
+    list-style: none;
+}
+
+.module li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.module li:last-child {
+    border-bottom: none;
+}
+
+.course-projects {
+    margin-top: 3rem;
+}
+
+.project-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-item {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-item h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .featured-course {
+        padding: 1.5rem;
+    }
+    
+    .course-highlights ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-modules {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 馈样式 */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.student-info {
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* FAQ样式 */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* 社交媒体链接样式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    object-fit: contain;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .social-link {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+    }
+    
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+    
+    .contact-info {
+        padding: 2rem;
+    }
+}
+
+/* 更新个人介绍样式 */
+.intro-text {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.highlight-text {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-family: 'Noto Serif SC', serif;
+    margin-bottom: 1.5rem;
+}
+
+/* 时间线样式 */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--secondary-color);
+}
+
+.timeline li {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.year {
+    position: absolute;
+    left: -50px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+/* 经验列表样式 */
+.experience-list {
+    list-style: none;
+}
+
+.experience-list li {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.experience-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* 成就网格样式 */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.achievement-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+
+.achievement-number {
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .year {
+        left: -40px;
+        font-size: 0.8rem;
+    }
+}
+
+/* 优化微信二维码弹窗样式 */
+.wechat-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.wechat-modal.active {
+    display: flex;
+    animation: modalBackgroundFade 0.4s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    width: 450px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--primary-color);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: var(--light-gray);
+}
+
+.close-modal:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.qr-code {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 25px;
+    border: 12px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.02);
+}
+
+.modal-content p {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.qr-subtitle {
+    font-size: 1.1rem !important;
+    color: var(--secondary-color) !important;
+    margin-top: 8px !important;
+    font-weight: 500 !important;
+}
+
+@keyframes modalBackgroundFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalContentShow {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-content {
+    animation: modalContentShow 0.5s ease;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .qr-code {
+        width: 280px;
+        height: 280px;
+        border-width: 10px;
+    }
+    
+    .modal-content {
+        padding: 40px 30px;
+        width: 85%;
+    }
+    
+    .modal-content p {
+        font-size: 1.2rem;
+    }
+    
+    .qr-subtitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* 优化移动端竖屏显示 */
+@media (max-width: 480px) {
+    .qr-code {
+        width: 240px;
+        height: 240px;
+        border-width: 8px;
+    }
+    
+    .modal-content {
+        padding: 35px 25px;
+    }
+}
+
+/* 添加悬浮联系按钮样式 */
+.contact-float {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: var(--secondary-color);
+}
+
+.contact-button .icon {
+    font-size: 24px;
+}
+
+.button-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .contact-float {
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .contact-button {
+        padding: 12px 20px;
+    }
+    
+    .contact-button .icon {
+        font-size: 20px;
+    }
+    
+    .button-text {
+        font-size: 14px;
+    }
+}
+
+/* 添加标题样式 */
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* 确保所有交互元素有 hover 状态 */
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.faq-question:hover {
+    background-color: var(--light-gray);
+} 
